@@ -1,0 +1,233 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'style2.css' %}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Reggae+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    window.onload = function () {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    };
+  </script>
+</head>
+
+<body>
+  <div id="loader">
+    <img src="{% static 'tennispreloader.gif' %}" alt="">
+  </div>
+
+  <div id="content">
+    <div class="container">
+      <div class="title">
+        <a  style="text-decoration: none;" href="{%url 'homepage'%}"><h1>PaisaBachau's contact room </h1></a>
+      </div>
+      
+      <div class="contactus">
+      
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="well well-sm">
+                        <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">
+                                        Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">
+                                        Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                        </span>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">
+                                        Subject</label>
+                                    <select id="subject" name="subject" class="form-control" required="required">
+                                        <option value="na" selected="">Choose One:</option>
+                                       
+                                        <option value="suggestions">Suggestions</option>
+                                        <option value="product">Product Support</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">
+                                        Message</label>
+                                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                        placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                                    Send Message</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <form>
+                    <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+                    <address>
+                        <strong>Paisabachau, Inc.</strong><br>
+                        New Baneswhor,Kathmandu<br>
+                        lalitpur,Kathmandu<br>
+                        <abbr title="Phone">
+                            P:</abbr>
+                        123456789
+                    </address>
+                    <address>
+                        <strong>Full Name</strong><br>
+                        <a href="mailto:#">Paisabachau09@gmail.com</a>
+                    </address>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+    
+
+     
+
+
+          
+
+
+         
+
+
+
+      
+
+          <footer class="text-center text-lg-start bg-light text-muted">
+  
+
+            <!-- Section: Links  -->
+            <section class="">
+              <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4" style="margin-top: 1rem;">
+                      <i class="fas fa-gem me-3" ></i>PaisaBachau
+                    </h6>
+                    <p>
+                     Paisabachau is site designed for easy find out of different products available in online at best possible price.
+                     with the moto of time is money now you need not to visit different sites for price comparison. Just click the cateogeory of product
+                     you want and scroll out how much it cost in top online sites of Nepal. 
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+          
+                  <!-- Grid column -->
+                  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4" style="margin-top:1rem;">
+                      Products
+                    </h6>
+                    <p>
+                      <a href="{%url 'laptoppage' %}" style="text-decoration: none;"  class="text-reset">Laptops</a>
+                    </p>
+                    <p>
+                      <a href="{%url 'mobilepage'%}" style="text-decoration: none;" class="text-reset">Mobile</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset" style="text-decoration: none;">Television</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset" style="text-decoration: none;">Refrigerators</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+          
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4" style="margin-top:1rem;">
+                      Useful links
+                    </h6>
+                    <p>
+                      <a href="https://itti.com.np/" class="text-reset" style="text-decoration: none;">ITTInepal</a>
+                    </p>
+                    <p>
+                      <a href="https://lds.com.np/" class="text-reset" style="text-decoration: none;">ldsnepal</a>
+                    </p>
+                    <p>
+                      <a href="https://ptechktm.com/" class="text-reset" style="text-decoration: none;">ptechelectronics</a>
+                    </p>
+                    <p>
+                      <a href="https://zozohub.com/" class="text-reset" style="text-decoration: none;">zozohub</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+          
+                  <!-- Grid column -->
+                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4" style="margin-top: 1rem; margin-left: 1rem;">
+                      Contact
+                    </h6>
+                    <p><i class="fas fa-home me-3"></i> New Baneswhor, Kathmandu, Nepal</p>
+                    <p>
+                      <i class="fas fa-envelope me-3"></i>
+                      timeismoney9999@gmail.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> +9779868849124</p>
+                    <p><i class="fas fa-print me-3"></i> +9779868849124</p>
+                  </div>
+                  <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+              </div>
+            </section>
+            <!-- Section: Links  -->
+          
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+              © 2021 Copyright:
+              <a class="text-reset fw-bold" href="https://mdbootstrap.com/" style="text-decoration: none;">Paisabachau Network</a>
+              <p>Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.</p>
+            </div>
+            <!-- Copyright -->
+          </footer>
+    
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+      </script>
+
+
+  </div>
+</body>
+
+</html>
